@@ -9,16 +9,12 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
-
-  // PLUGINS=========
-  plugins: [new MiniCssExtractPlugin()],
-
   // MODULE POCETAK
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.s?css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.js$/,
@@ -29,8 +25,11 @@ module.exports = {
       },
     ],
   },
+  // PLUGINS=========
+  plugins: [new MiniCssExtractPlugin()],
   devtool: "source-map",
   devServer: {
     static: "./",
+    hot: true,
   },
 };

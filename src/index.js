@@ -1,4 +1,4 @@
-import "./scss/style.css";
+import "./scss/index.scss";
 const myName = {
   firsName: "Milan",
   secondName: "Bajic",

@@ -1,0 +1,7 @@
+@use "variable";
+
+body {
+  background: variable.$bg;
+  color: variable.$text;
+  padding: 10px;
+}
